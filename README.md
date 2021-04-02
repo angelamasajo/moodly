@@ -1,6 +1,6 @@
 # Moodly App
 
-Link to app: https://plantventory-app.vercel.app/
+Link to app: app-url-here
 
 ## About the App
 
@@ -37,13 +37,11 @@ Users can add new Moodly entries on this page, including title, mood, and descri
 
 ### Endpoints
 
-#### /api/plants
-- GET: access to all the plants
-- POST: allow users post plants to database
+#### /api/entries
+- GET: access to all the user entries
+- POST: allow users post entries
 
-#### /api/users/1/plants
-- GET: access demo user plants
-- POST: post plants from all plants to user plants
+#### /api/entries/:entry_id
+- GET: access separate plants
+- DELETE: users can delete entries
 
-#### /api/users/1/plants/:plant_id
-- DELETE: allow users to delete plants from user list

@@ -21,7 +21,7 @@ const FILES = [
     id: 4,
     title: "Social justice",
     desciption: "I'm anxious because here are the reasons, here's what happened and why.",
-    mood: "Toxic",
+    mood: "anxious",
   }
 ]
 
