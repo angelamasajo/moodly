@@ -10,6 +10,7 @@ class AddEntry extends Component {
     title: "",
     description: "",
     mood: "",
+    author: 1,
   };
 
   handleSubmit = (e) => {

@@ -79,7 +79,7 @@ class AllEntriesPage extends Component {
           &&
         // (entry["toxicity"].toLowerCase() === plantToxicity ||
         //   plantToxicity === "all") &&
-        entry["name"].toLowerCase().includes(searchTerm.toLowerCase())
+        entry["description"].toLowerCase().includes(searchTerm.toLowerCase())
       );
     });
     this.setState({ filteredData: filter });

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./EntryListItem.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMinus } from "@fortawesome/free-solid-svg-icons";
 // import PlantContext from "../PlantContext";
-// import config from "../config";
+import config from "../config";
 
-class PlantListItem extends Component {
+class EntryListItem extends Component {
   // static contextType = PlantContext;
 
   // state = {
@@ -40,6 +40,28 @@ class PlantListItem extends Component {
   //       this.props.history.push("/my-plants");
   //     });
   // };
+  //-------------------
+
+  // deleteFromMyList = (e, entry_id) => {
+  //   fetch(`${config.API_ENDPOINT}/entries/${entry_id}`, {
+  //     method: "DELETE",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //   }).then(() => {
+  //     this.fetchPlants();
+  //     this.handleDeleteFromMyList();
+  //     alert("Plant deleted.");
+  //   });
+  // };
+
+  // handleDeleteFromMyList = (userPlant) => {
+  //   this.setState({
+  //     myPlants: this.state.myPlants.filter(
+  //       (plant) => plant.plant_id !== userPlant
+  //     ),
+  //   });
+  // };
 
   render() {
     const { id, title, mood, description } = this.props; // eslint-disable-line
@@ -51,6 +73,16 @@ class PlantListItem extends Component {
             <p>{mood}</p>
             <p>{description}</p>
           </label>
+          {/* <div className="DeletePlant">
+            <button
+              type="button"
+              onClick={(e) => this.deleteFromMyList(e, entry.id)}
+              className="DeletePlant__button"
+            >
+              <FontAwesomeIcon icon={faMinus} /> <br />
+              Remove from my list
+            </button>
+          </div> */}
 {/* 
           <div className="ControlBar">
             <button type="submit" className="ControlBar__button">
@@ -64,4 +96,4 @@ class PlantListItem extends Component {
   }
 }
 
-export default PlantListItem;
+export default EntryListItem;
