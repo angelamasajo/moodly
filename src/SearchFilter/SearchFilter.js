@@ -8,7 +8,7 @@ class SearchFilter extends Component {
     return (
       <div className="SearchFilter">
         <div className="SearchFilter__heading">
-          <h1>All Plants</h1>
+          <h1>Moodly Entries</h1>
         </div>
         <div className="SearchFilter__controls">
           <SearchBox

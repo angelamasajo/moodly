@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import "./EntryListItem.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMinus } from "@fortawesome/free-solid-svg-icons";
-// import PlantContext from "../PlantContext";
-import config from "../config";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faMinus } from "@fortawesome/free-solid-svg-icons";
+// import config from "../config";
 
 class EntryListItem extends Component {
   // static contextType = PlantContext;

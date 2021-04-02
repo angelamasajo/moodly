@@ -10,7 +10,7 @@ class FilterOptions extends Component {
         <div className="Filtering_Type">
           <form>
             <fieldset>
-              <legend>Plant Type</legend>
+              <legend>Mood</legend>
 
               <label htmlFor="filter_allTypes">
                 <input
