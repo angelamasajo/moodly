@@ -4,10 +4,9 @@ Link to app: https://plantventory-app.vercel.app/
 
 ## About the App
 
-Take care of your plants with ease. Plantventory allows users tobrowse through available plants within the database, where they can find plant type, toxicity, and care details to help them find proper care for plants.
+Moodly is a mood tracker, where the user can track their moods regularly and make a journal entry based on their mood. Users can then look back at their journal entries by filtering which journal entries they want to see by mood speficied to help them navigate any strong emotions, regardless of whether they are positive or negative.
 
-By adding plants to the their own user list, users can easily sift through it to keep 
-important plant details in one place.
+
 
 ## Pages
 
