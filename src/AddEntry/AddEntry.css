@@ -1,0 +1,23 @@
+.form-section {
+  margin: 30px;
+  color: white;
+}
+
+textarea,
+#title {
+  width: 75%;
+  padding: 10px;
+}
+
+.button-section {
+  margin-left: 10px;
+}
+
+.add-plant-button {
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: #0e2b22;
+  color: white;
+}

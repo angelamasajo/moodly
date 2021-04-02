@@ -1,0 +1,44 @@
+.nav {
+  background-color: #0e2b22;
+  padding: 20px;
+  font-size: 20px;
+  font-size: large;
+  position: relative;
+  margin-top: 0px;
+}
+
+.nav li {
+  margin: 0 5px 10px 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  color: white;
+}
+
+.nav a:visited {
+  color: white;
+}
+
+.nav a:hover {
+  color: wheat;
+}
+
+.nav a {
+  text-decoration: none;
+  line-height: 100%;
+  padding: 3px 12px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+}

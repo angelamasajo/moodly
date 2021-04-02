@@ -1,0 +1,16 @@
+.HomePageButton {
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #0e2b22;
+  color: white;
+  font-size: 20px;
+}
+
+.HomeDiv {
+  margin: 30px;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  padding: 4px 20px 20px 20px;
+}
