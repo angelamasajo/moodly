@@ -1,39 +1,28 @@
 const FILES = [
   {
     id: 1,
-    name: "Monstera Deliciosa",
-    plant_type: "Tropical",
-    toxicity: "Toxic",
-    care_details: "Here's the care detail for the monstera",
+    title: "First day of work",
+    desciption: "I'm excited because here are the reasons, here's what happened and why.",
+    mood: "excited",
   },
   {
     id: 2,
-    name: "Monstera Adansonii",
-    plant_type: "Tropical",
-    toxicity: "Toxic",
-    care_details: "Here's the care detail for the monstera adansonii",
+    title: "Rainy day",
+    desciption: "I'm sad because here are the reasons, here's what happened and why.",
+    mood: "sad",
   },
   {
     id: 3,
-    name: "Christmas Cactus",
-    plant_type: "Holiday",
-    toxicity: "Pet-safe",
-    care_details: "Here's the care detail for the christmas cactus",
+    title: "App not working",
+    desciption: "I'm frustrated because here are the reasons, here's what happened and why.",
+    mood: "frustrated",
   },
   {
     id: 4,
-    name: "Golden Pothos",
-    plant_type: "Trailing",
-    toxicity: "Toxic",
-    care_details: "Here's the care detail for the golden pothos",
-  },
-  {
-    id: 5,
-    name: "Zamioculcas Zamiifolia",
-    plant_type: "Other",
-    toxicity: "Toxic",
-    care_details: "Here's the care detail for the ZZ plant",
-  },
+    title: "Social justice",
+    desciption: "I'm anxious because here are the reasons, here's what happened and why.",
+    mood: "Toxic",
+  }
 ]
 
 export default FILES;

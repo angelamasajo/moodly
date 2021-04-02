@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import EntryList from "../EntryList/EntryList";
 import SearchFilter from "../SearchFilter/SearchFilter";
 import config from "../config";
+// import FILES from '../dummy-store'
 
 class AllEntriesPage extends Component {
   state = {
@@ -54,6 +55,8 @@ class AllEntriesPage extends Component {
       }
     );
   }
+
+//-----------------------using code up there
 
   // updateFilterOptionTox(tox) {
   //   this.setState(

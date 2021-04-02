@@ -1,4 +1,4 @@
-# Plantventory App
+# Moodly App
 
 Link to app: https://plantventory-app.vercel.app/
 
@@ -13,21 +13,17 @@ important plant details in one place.
 
 ### Landing Page 
 ![landing_page](/app-screenshots/plantventory-home.png)
-This is the introduction located on the main page, explaining what Plantventory does and what it hopes to accomplish. 
+This is the introduction located on the main page, explaining what Moodly does and what it hopes to accomplish. 
 
 
 ### All Plants Page
 ![allplants_page](/app-screenshots/plantventory-allplants.png)
-This page manages the full list of plants in the database, where users can add plants in their user list. It can also filter through the list of plants via search box and filters for plant type and toxicity.
+This page manages the full list of Moodly entries that the user has added. The entries can be sorted by mood to help users navigate similar emotions.
 
-### My Plants Page
-![myplants_page](/app-screenshots/plantventory-myplants.png)
-
-The demo user can see their own plant inventory in this page, including information about toxicity, plant type, and care details for each plant.
 
 ### Add Plant Page
 ![addplant_page](/app-screenshots/plantventory-addplant.png)
-Users can contribute plants to the database and add to their list if they so wish. It provides options for plant type, toxicity, and area for care details as well.
+Users can add new Moodly entries on this page, including title, mood, and description/journal entry.
 
 
 ## Technology Used
