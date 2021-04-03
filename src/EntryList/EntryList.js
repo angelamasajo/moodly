@@ -1,16 +1,18 @@
 import React, { Component } from "react";
-import PlantListItem from "../EntryListItem/EntryListItem";
+import EntryListItem from "../EntryListItem/EntryListItem";
 import "./EntryList.css";
 
 class EntryList extends Component {
   render() {
     const { allEntries } = this.props;
     const list = allEntries.map((file, key) => (
-      <PlantListItem
+      <EntryListItem
         {...file}
         key={key}
         id={file.id}
         history={this.props.history}
+        allEntries={this.props.allEntries}
+        // componentDidMount={this.props.componentDidMount()}
       />
     ));
 

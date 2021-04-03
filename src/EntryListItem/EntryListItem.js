@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import "./EntryListItem.css";
-import { compareAsc, format, parseISO } from 'date-fns'
+import { format, parseISO } from 'date-fns'
 
 
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faMinus } from "@fortawesome/free-solid-svg-icons";
-// import config from "../config";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMinus } from "@fortawesome/free-solid-svg-icons";
+import config from "../config";
 
 class EntryListItem extends Component {
-  // static contextType = PlantContext;
-
+  state = {
+    myEntries: this.props.allEntries
+  }
   // state = {
   //   plant_id: this.props.id,
   //   user_id: 1,
@@ -44,52 +45,57 @@ class EntryListItem extends Component {
   // };
   //-------------------
 
-  // deleteFromMyList = (e, entry_id) => {
-  //   fetch(`${config.API_ENDPOINT}/entries/${entry_id}`, {
-  //     method: "DELETE",
-  //     headers: {
-  //       "content-type": "application/json",
-  //     },
-  //   }).then(() => {
-  //     this.fetchPlants();
-  //     this.handleDeleteFromMyList();
-  //     alert("Plant deleted.");
-  //   });
-  // };
+  deleteFromMyList = (e, id) => {
+    e.preventDefault();
 
-  // handleDeleteFromMyList = (userPlant) => {
-  //   this.setState({
-  //     myPlants: this.state.myPlants.filter(
-  //       (plant) => plant.plant_id !== userPlant
-  //     ),
-  //   });
-  // };
+    fetch(`${config.API_ENDPOINT}/entries/${id}`, {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+      },
+    })
+      .then(() => {
+      // this.props.componentDidMount();
+      this.handleDeleteFromMyList();
+      alert("Entry deleted.");
+      this.props.history.push("/all-entries")
+    });
+
+  };
+
+  handleDeleteFromMyList = (userEntry) => {
+    this.setState({
+      myEntries: this.state.myEntries.filter(
+        (entry) => entry.id !== userEntry
+      ),
+    });
+  };
 
   render() {
     const { id, title, mood, description, modified } = this.props; // eslint-disable-line
     return (
       <div className="EntryListItem">
-        {/* <form onSubmit={this.handleAddToMyList}> */}
+        {/* <form onSubmit={this.deleteFromMyList(id)}> */}
           <label value={this.props.id} className="PlantListItem__plantName">
             <h2>{title}</h2>
             <p>{format(parseISO(modified), "yyyy-MM-dd")}</p>
             <p>{mood}</p>
             <p>{description}</p>
           </label>
-          {/* <div className="DeletePlant">
+          <div className="DeletePlant">
             <button
               type="button"
-              onClick={(e) => this.deleteFromMyList(e, entry.id)}
+              onClick={(e) => this.deleteFromMyList(e, id)}
               className="DeletePlant__button"
             >
               <FontAwesomeIcon icon={faMinus} /> <br />
               Remove from my list
             </button>
-          </div> */}
-{/* 
-          <div className="ControlBar">
+          </div>
+
+          {/* <div className="ControlBar">
             <button type="submit" className="ControlBar__button">
-              <FontAwesomeIcon icon={faPlus} /> <br />
+              <FontAwesomeIcon icon={faMinus} /> <br />
               Add to my list
             </button>
           </div> */}
