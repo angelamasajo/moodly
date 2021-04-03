@@ -12,15 +12,17 @@ class AddEntry extends Component {
     mood: "",
     author: 1,
   };
+  
 
   handleSubmit = (e) => {
     e.preventDefault();
 
     const postBody = {
-      name: this.state.title,
+      title: this.state.title,
       description: this.state.description,
       mood: this.state.mood,
     };
+    console.log(this.state.title, this.state.description, this.state.mood)
 
     fetch(`${config.API_ENDPOINT}/entries`, {
       method: "POST",
@@ -92,7 +94,7 @@ class AddEntry extends Component {
 
             <input
               type="radio"
-              name="happy"
+              name="mood"
               id="mood-happy"
               value="happy"
               className="mood-radio"
@@ -106,7 +108,7 @@ class AddEntry extends Component {
 
             <input
               type="radio"
-              name="sad"
+              name="mood"
               id="mood-sad"
               value="sad"
               className="mood-radio"
@@ -120,7 +122,7 @@ class AddEntry extends Component {
 
             <input
               type="radio"
-              name="content"
+              name="mood"
               id="mood-content"
               value="content"
               className="mood-radio"
@@ -134,7 +136,7 @@ class AddEntry extends Component {
 
             <input
               type="radio"
-              name="angry"
+              name="mood"
               id="mood-angry"
               value="angry"
               className="mood-radio"
@@ -148,7 +150,7 @@ class AddEntry extends Component {
 
             <input
               type="radio"
-              name="frustrated"
+              name="mood"
               id="mood-frustrated"
               value="frustrated"
               className="mood-radio"
@@ -161,7 +163,7 @@ class AddEntry extends Component {
             <br />
             <input
               type="radio"
-              name="anxious"
+              name="mood"
               id="mood-anxious"
               value="anxious"
               className="mood-radio"
@@ -175,7 +177,7 @@ class AddEntry extends Component {
 
             <input
               type="radio"
-              name="excited"
+              name="mood"
               id="mood-excited"
               value="excited"
               className="mood-radio"
@@ -189,7 +191,7 @@ class AddEntry extends Component {
 
             <input
               type="radio"
-              name="plantType"
+              name="mood"
               id="mood-other"
               value="other"
               className="mood-radio"

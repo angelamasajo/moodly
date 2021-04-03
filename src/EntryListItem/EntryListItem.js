@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./EntryListItem.css";
+import { compareAsc, format, parseISO } from 'date-fns'
+
+
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faMinus } from "@fortawesome/free-solid-svg-icons";
 // import config from "../config";
@@ -63,12 +66,13 @@ class EntryListItem extends Component {
   // };
 
   render() {
-    const { id, title, mood, description } = this.props; // eslint-disable-line
+    const { id, title, mood, description, modified } = this.props; // eslint-disable-line
     return (
       <div className="EntryListItem">
         {/* <form onSubmit={this.handleAddToMyList}> */}
           <label value={this.props.id} className="PlantListItem__plantName">
             <h2>{title}</h2>
+            <p>{format(parseISO(modified), "yyyy-MM-dd")}</p>
             <p>{mood}</p>
             <p>{description}</p>
           </label>
