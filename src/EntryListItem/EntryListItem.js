@@ -59,6 +59,7 @@ class EntryListItem extends Component {
       this.handleDeleteFromMyList();
       alert("Entry deleted.");
       this.props.history.push("/all-entries")
+      // setTimeout(_______, 5000);
     });
 
   };
@@ -86,10 +87,10 @@ class EntryListItem extends Component {
             <button
               type="button"
               onClick={(e) => this.deleteFromMyList(e, id)}
-              className="DeletePlant__button"
+              className="DeleteEntry__button"
             >
               <FontAwesomeIcon icon={faMinus} /> <br />
-              Remove from my list
+              delete entry
             </button>
           </div>
 
