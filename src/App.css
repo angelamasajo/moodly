@@ -1,5 +1,5 @@
 .App > footer {
-  background-color: #0D0A36;
+  background-color: #0B0A2B;
   padding: 20px;
   color: white;
   bottom: 0px;
@@ -7,5 +7,7 @@
 }
 
 .App {
+  background-image: url("dark-calm.jpg");  
   background-color: #202F66;
+
 }

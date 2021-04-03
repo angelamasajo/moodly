@@ -59,7 +59,7 @@ class EntryListItem extends Component {
       this.handleDeleteFromMyList();
       alert("Entry deleted.");
       this.props.history.push("/all-entries")
-      // setTimeout(_______, 5000);
+      // setTimeout(deleteFromMyList(e, id), 5000);
     });
 
   };
