@@ -42,6 +42,6 @@ Users can add new Moodly entries on this page, including title, mood, and descri
 - POST: allow users post entries
 
 #### /api/entries/:entry_id
-- GET: access separate plants
+- GET: access separate entries
 - DELETE: users can delete entries
 
