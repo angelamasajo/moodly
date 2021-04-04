@@ -8,29 +8,29 @@ class AllEntriesPage extends Component {
   state = {
     searchTerm: "",
     filterOption: "All",
-    // filterOptionTox: "all",
-    // plantType: "all",
     mood: "all",
-    // plantToxicity: "all",
-    // plantData: [],
     entryData: [],
     filteredData: [],
   };
 
   componentDidMount() {
+    this.fetchEntries()
+  }
+
+  fetchEntries = () => {
     fetch(`${config.API_ENDPOINT}/entries`)
-      .then((entries) => {
-        if (!entries.ok) {
-          return entries.json().then((e) => Promise.reject(e));
-        }
-        return entries.json();
-      })
-      .then((entryData) => {
-        this.setState({ entryData, filteredData: entryData });
-      })
-      .catch((error) => {
-        console.error({ error }); // eslint-disable-line
-      });
+    .then((entries) => {
+      if (!entries.ok) {
+        return entries.json().then((e) => Promise.reject(e));
+      }
+      return entries.json();
+    })
+    .then((entryData) => {
+      this.setState({ entryData, filteredData: entryData });
+    })
+    .catch((error) => {
+      console.error({ error }); // eslint-disable-line
+    });
   }
 
   updateSearchTerm(term) {
@@ -105,6 +105,7 @@ class AllEntriesPage extends Component {
           filterOption={this.state.filterOption}
           // filterOptionTox={this.state.filterOptionTox}
           history={this.props.history}
+          fetchEntries={this.fetchEntries()}
         />
       </div>
     );

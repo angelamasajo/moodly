@@ -12,7 +12,8 @@ class EntryList extends Component {
         id={file.id}
         history={this.props.history}
         allEntries={this.props.allEntries}
-        // componentDidMount={this.props.componentDidMount()}
+        // fetchEntries={this.props.fetchEntries}
+
       />
     ));
 
