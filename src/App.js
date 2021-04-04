@@ -4,7 +4,6 @@ import "./App.css";
 import NavBar from "./NavBar/NavBar";
 import Home from "./Home/Home";
 import AllEntriesPage from "./AllEntriesPage/AllEntriesPage";
-// import MyPlantsPage from "./MyPlantsPage/MyPlantsPage";
 import AddEntry from "./AddEntry/AddEntry";
 
 class App extends Component {
@@ -22,7 +21,6 @@ class App extends Component {
             />
             <Route path="/all-entries" component={AllEntriesPage} />
             <Route path="/add-entry" component={AddEntry} />
-            {/* <Route path="/my-plants" component={MyPlantsPage} /> */}
           </Switch>
         </main>
         <footer>Moodly by Angela Masajo</footer>

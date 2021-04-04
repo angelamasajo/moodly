@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./EntryListItem.css";
-import { format, parseISO } from 'date-fns'
-
+import { format, parseISO } from "date-fns";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
@@ -10,12 +9,9 @@ import config from "../config";
 class EntryListItem extends Component {
   state = {
     entryData: this.props.allEntries,
-    filteredData: this.props.allEntries
-  }
+    filteredData: this.props.allEntries,
+  };
 
-  //-------------------
-
-  //-------------------
   deleteFromMyList = (e, id) => {
     e.preventDefault();
 
@@ -24,14 +20,12 @@ class EntryListItem extends Component {
       headers: {
         "content-type": "application/json",
       },
-    })
-      .then(() => {
+    }).then(() => {
       this.handleDeleteFromMyList();
       alert("Entry deleted.");
       this.props.fetchEntries();
-      this.props.history.push("/all-entries")
+      this.props.history.push("/all-entries");
     });
-
   };
 
   handleDeleteFromMyList = (userEntry) => {
@@ -46,22 +40,22 @@ class EntryListItem extends Component {
     const { id, title, mood, description, modified } = this.props; // eslint-disable-line
     return (
       <div className="EntryListItem">
-          <label value={this.props.id} className="PlantListItem__plantName">
-            <h2>{title}</h2>
-            <p>{format(parseISO(modified), "yyyy-MM-dd")}</p>
-            <p>{mood}</p>
-            <p>{description}</p>
-          </label>
-          <div className="DeletePlant">
-            <button
-              type="button"
-              onClick={(e) => this.deleteFromMyList(e, id)}
-              className="DeleteEntry__button"
-            >
-              <FontAwesomeIcon icon={faMinus} /> <br />
-              delete entry
-            </button>
-          </div>
+        <label value={this.props.id} className="PlantListItem__plantName">
+          <h2>{title}</h2>
+          <p>{format(parseISO(modified), "yyyy-MM-dd")}</p>
+          <p>{mood}</p>
+          <p>{description}</p>
+        </label>
+        <div className="DeletePlant">
+          <button
+            type="button"
+            onClick={(e) => this.deleteFromMyList(e, id)}
+            className="DeleteEntry__button"
+          >
+            <FontAwesomeIcon icon={faMinus} /> <br />
+            delete entry
+          </button>
+        </div>
       </div>
     );
   }

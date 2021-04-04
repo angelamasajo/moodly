@@ -13,7 +13,6 @@ class EntryList extends Component {
         history={this.props.history}
         allEntries={this.props.allEntries}
         fetchEntries={this.props.fetchEntries}
-
       />
     ));
 

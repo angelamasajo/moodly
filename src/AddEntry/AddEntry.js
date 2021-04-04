@@ -12,7 +12,6 @@ class AddEntry extends Component {
     mood: "",
     author: 1,
   };
-  
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +21,7 @@ class AddEntry extends Component {
       description: this.state.description,
       mood: this.state.mood,
     };
-    console.log(this.state.title, this.state.description, this.state.mood)
+    console.log(this.state.title, this.state.description, this.state.mood);
 
     fetch(`${config.API_ENDPOINT}/entries`, {
       method: "POST",
@@ -201,35 +200,6 @@ class AddEntry extends Component {
               <span>other</span>
             </label>
           </section>
-
-          {/* <section className="form-section plant-toxicity-section">
-            <h2>Toxicity</h2>
-            <input
-              type="radio"
-              name="toxType"
-              value="Toxic"
-              id="plant-type-toxic"
-              className="plant-type-radio"
-              onChange={this.handleChange}
-            />
-            <label htmlFor="plant-type-toxic">
-              <span>Toxic</span>
-            </label>
-
-            <br />
-
-            <input
-              type="radio"
-              name="toxType"
-              value="Pet-safe"
-              id="plant-type-petsafe"
-              className="plant-type-radio"
-              onChange={this.handleChange}
-            />
-            <label htmlFor="plant-type-petsafe">
-              <span>Pet-safe</span>
-            </label>
-          </section> */}
 
           <section className="button-section">
             <button className="add-plant-button" type="submit">

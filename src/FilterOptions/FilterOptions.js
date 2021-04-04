@@ -140,56 +140,6 @@ class FilterOptions extends Component {
             </fieldset>
           </form>
         </div>
-
-        {/* <div className="Filtering_Toxicity">
-          <form>
-            <fieldset>
-              <legend>Toxicity</legend>
-
-              <label htmlFor="filter_allToxicity">
-                <input
-                  type="radio"
-                  value="all"
-                  id="filter_allToxicity"
-                  name="filterToxicity"
-                  checked={filterOptionTox === "all"}
-                  onChange={(e) =>
-                    this.props.handleFilterToxChange(e.target.value)
-                  }
-                />
-                All
-              </label>
-
-              <label htmlFor="filter_toxic">
-                <input
-                  type="radio"
-                  value="toxic"
-                  id="filter_toxic"
-                  name="filterToxicity"
-                  checked={filterOptionTox === "toxic"}
-                  onChange={(e) =>
-                    this.props.handleFilterToxChange(e.target.value)
-                  }
-                />
-                Toxic
-              </label>
-
-              <label htmlFor="filter_Petsafe">
-                <input
-                  type="radio"
-                  value="Pet-safe"
-                  id="filter_petsafe"
-                  name="filterToxicity"
-                  checked={filterOptionTox === "Pet-safe"}
-                  onChange={(e) =>
-                    this.props.handleFilterToxChange(e.target.value)
-                  }
-                />
-                Pet-safe
-              </label>
-            </fieldset>
-          </form>
-        </div> */}
       </div>
     );
   }

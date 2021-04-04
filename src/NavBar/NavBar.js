@@ -18,11 +18,6 @@ class NavBar extends Component {
                 ALL ENTRIES
               </NavLink>
             </li>
-            {/* <li>
-              <NavLink activeClassName="current" to="/my-plants">
-                MY PLANTS
-              </NavLink>
-            </li> */}
             <li>
               <NavLink activeClassName="current" to="/add-entry">
                 ADD ENTRY
