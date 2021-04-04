@@ -4,7 +4,6 @@ import "./FilterOptions.css";
 class FilterOptions extends Component {
   render() {
     const { filterOption } = this.props;
-    // const { filterOptionTox } = this.props;
     return (
       <div className="FilterOptions">
         <div className="Filtering_Type">
