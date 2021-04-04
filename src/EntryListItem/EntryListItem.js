@@ -40,13 +40,13 @@ class EntryListItem extends Component {
     const { id, title, mood, description, modified } = this.props; // eslint-disable-line
     return (
       <div className="EntryListItem">
-        <label value={this.props.id} className="PlantListItem__plantName">
+        <label value={this.props.id} className="EntryListItem__entryTitle">
           <h2>{title}</h2>
           <p>{format(parseISO(modified), "yyyy-MM-dd")}</p>
           <p>{mood}</p>
           <p>{description}</p>
         </label>
-        <div className="DeletePlant">
+        <div className="DeleteEntry">
           <button
             type="button"
             onClick={(e) => this.deleteFromMyList(e, id)}

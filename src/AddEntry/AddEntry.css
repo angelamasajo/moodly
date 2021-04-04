@@ -13,7 +13,8 @@ textarea,
   margin-left: 10px;
 }
 
-.add-plant-button {
+.add-entry-button {
+  font-size: 18px;
   border-radius: 20px;
   padding: 10px 20px;
   margin-left: 20px;

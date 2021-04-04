@@ -17,7 +17,7 @@ class EntryList extends Component {
     ));
 
     return (
-      <div className="PlantList">
+      <div className="EntryList">
         <fieldset>
           <legend>Results</legend>
           {list}

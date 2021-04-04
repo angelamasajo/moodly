@@ -193,14 +193,14 @@ class AddEntry extends Component {
               className="mood-radio"
               onChange={this.handleChange}
             />
-            <label htmlFor="plant-type-other">
+            <label htmlFor="mood-other">
               <span>other</span>
             </label>
           </section>
 
           <section className="button-section">
-            <button className="add-plant-button" type="submit">
-              Submit
+            <button className="add-entry-button" type="submit">
+              SUBMIT
             </button>
           </section>
         </form>
