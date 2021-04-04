@@ -18,7 +18,6 @@ class AddEntry extends Component {
       description: this.state.description,
       mood: this.state.mood,
     };
-    console.log(this.state.title, this.state.description, this.state.mood);
 
     fetch(`${config.API_ENDPOINT}/entries`, {
       method: "POST",
