@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import EntryList from "../EntryList/EntryList";
 import SearchFilter from "../SearchFilter/SearchFilter";
 import config from "../config";
-// import FILES from '../dummy-store'
 
 class AllEntriesPage extends Component {
   state = {
@@ -56,20 +55,6 @@ class AllEntriesPage extends Component {
     );
   }
 
-//-----------------------using code up there
-
-  // updateFilterOptionTox(tox) {
-  //   this.setState(
-  //     {
-  //       plantToxicity: tox.toLowerCase(),
-  //       filterOptionTox: tox,
-  //     },
-  //     () => {
-  //       this.filterPlants();
-  //     }
-  //   );
-  // }
-
   filterEntries = () => {
     const { mood, entryData, searchTerm } = this.state;
     const filter = entryData.filter((entry) => {
@@ -77,14 +62,16 @@ class AllEntriesPage extends Component {
         (entry["mood"].toLowerCase() === mood ||
           mood === "all") 
           &&
-        // (entry["toxicity"].toLowerCase() === plantToxicity ||
-        //   plantToxicity === "all") &&
-        (entry["description"].toLowerCase().includes(searchTerm.toLowerCase()) 
-        || entry["title"].toLowerCase().includes(searchTerm.toLowerCase())
-        || entry["mood"].toLowerCase().includes(searchTerm.toLowerCase()))
+        (
+          entry["description"].toLowerCase().includes(searchTerm.toLowerCase()) 
+          || entry["title"].toLowerCase().includes(searchTerm.toLowerCase())
+          || entry["mood"].toLowerCase().includes(searchTerm.toLowerCase())
+        )
       );
     });
     this.setState({ filteredData: filter });
+    console.log(filter, 'filter')
+
   };
 
   render() {
@@ -95,17 +82,14 @@ class AllEntriesPage extends Component {
           handleUpdate={(term) => this.updateSearchTerm(term)}
           filterOption={this.state.filterOption}
           handleFilterChange={(option) => this.updateFilterOption(option)}
-          // filterOptionTox={this.state.filterOptionTox}
-          // handleFilterToxChange={(tox) => this.updateFilterOptionTox(tox)}
         />
 
         <EntryList
           allEntries={this.state.filteredData}
           searchTerm={this.state.searchTerm}
           filterOption={this.state.filterOption}
-          // filterOptionTox={this.state.filterOptionTox}
           history={this.props.history}
-          fetchEntries={this.fetchEntries()}
+          fetchEntries={this.fetchEntries}
         />
       </div>
     );

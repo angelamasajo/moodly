@@ -28,6 +28,7 @@ class EntryListItem extends Component {
       .then(() => {
       this.handleDeleteFromMyList();
       alert("Entry deleted.");
+      this.props.fetchEntries();
       this.props.history.push("/all-entries")
     });
 
@@ -35,7 +36,7 @@ class EntryListItem extends Component {
 
   handleDeleteFromMyList = (userEntry) => {
     this.setState({
-      entryData: this.state.entryData.filter(
+      filteredData: this.state.filteredData.filter(
         (entry) => entry.id !== userEntry
       ),
     });
