@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import PlantContext from "../PlantContext";
 import config from "../config";
 import "./AddEntry.css";
 
 class AddEntry extends Component {
-  static contextType = PlantContext;
-
   state = {
     title: "",
     description: "",

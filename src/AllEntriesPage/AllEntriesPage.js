@@ -68,7 +68,6 @@ class AllEntriesPage extends Component {
       );
     });
     this.setState({ filteredData: filter });
-    console.log(filter, "filter");
   };
 
   render() {

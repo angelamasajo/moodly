@@ -1,15 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import PlantContext from "./PlantContext";
+import { BrowserRouter } from "react-router-dom";
 
 it("renders without crashing", () => {
   const div = document.createElement("div");
-
-  const value = {
-    plantData: [],
-    addPlant: () => {},
-  };
-
-  ReactDOM.render(<PlantContext.Provider value={value} />, div);
+  ReactDOM.render(<BrowserRouter />, div)
   ReactDOM.unmountComponentAtNode(div);
 });
